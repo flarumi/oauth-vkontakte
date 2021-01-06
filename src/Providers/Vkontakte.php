@@ -11,7 +11,7 @@ use J4k\OAuth2\Client\Provider\Vkontakte as VkontakteProvider;
 
 class Vkontakte extends Provider
 {
-	protected $settings;
+    protected $settings;
 
     public function __construct(SettingsRepositoryInterface $settings)
     {
@@ -24,10 +24,15 @@ class Vkontakte extends Provider
     {
         return 'vkontakte';
     }
-
+	
+    public function icon(): string
+    {
+        return "fab fa-vk";
+    }
+	
     public function link(): string
     {
-        return 'https://vk-api.readthedocs.io/en/latest/';
+        return 'https://vk.com/apps?act=manage';
     }
 
     public function fields(): array
