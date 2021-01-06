@@ -3,7 +3,7 @@ fof-oauth:
     settings:
       providers:
         vkontakte:
-          description: Зарегистрировать свое приложение Вы можете здесь <a>https://vk.com/apps?act=manage</a>
+          description: Зарегистрировать свое приложение Вы можете здесь https://vk.com/apps?act=manage
           client_id_label: => fof-oauth.ref.settings.client_id
           client_secret_label: => fof-oauth.ref.settings.client_secret
 
