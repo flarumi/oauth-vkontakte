@@ -4,7 +4,6 @@ namespace Flarumi\OauthVkontakte;
 
 use Illuminate\Support\ServiceProvider;
 
-
 class OauthVkontakteServiceProvider extends ServiceProvider
 {
     public function register()
