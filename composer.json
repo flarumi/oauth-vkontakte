@@ -1,0 +1,43 @@
+{
+  "name": "flarumi/oauth-vkontakte",
+  "description": "Add vkontakte oauth to Flarum, extends FoF/Oauth",
+  "keywords": [
+    "flarum",
+    "oauth",
+    "vkontakte"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "homepage": "https://flarum.info",
+  "require": {
+    "flarum/core": "^0.1.0-beta.15",
+    "sergey-sla/oauth2-vkontakte": "^1.0.8",
+    "fof/oauth": "^0.2.0"
+  },
+  "authors": [
+    {
+      "name": "Flari",
+      "email": "site@flarum.info",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Flarumi\\OauthVkontakte\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Oauth Vkontakte",
+	  "category": "authentication",
+      "icon": {
+                "name": "fab fa-vk",
+                "backgroundColor": "#4A75A8",
+                "color": "#fff"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}
