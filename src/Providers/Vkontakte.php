@@ -48,7 +48,8 @@ class Vkontakte extends Provider
     {
         $registration
             ->provideTrustedEmail($user->getEmail())
-            ->suggestUsername($user->getScreenName())
+            ->provideAvatar(array_get($user->toArray(), 'photo_100'))
+            ->suggestUsername($user->getName())
             ->setPayload($user->toArray());
     }
 }
