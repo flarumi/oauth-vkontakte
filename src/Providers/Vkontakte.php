@@ -3,6 +3,7 @@
 namespace Flarumi\OauthVkontakte\Providers;
 
 use FoF\OAuth\Provider;
+use Illuminate\Support\Arr;
 use Flarum\Forum\Auth\Registration;
 use Flarum\Settings\SettingsRepositoryInterface;
 use League\OAuth2\Client\Provider\AbstractProvider;
@@ -48,7 +49,7 @@ class Vkontakte extends Provider
     {
         $registration
             ->provideTrustedEmail($user->getEmail())
-            ->provideAvatar(array_get($user->toArray(), 'photo_100'))
+            ->provideAvatar(Arr::get($user->toArray(), 'photo_100', ''))
             ->suggestUsername($user->getName())
             ->setPayload($user->toArray());
     }
