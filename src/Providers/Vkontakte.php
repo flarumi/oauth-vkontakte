@@ -55,11 +55,8 @@ class Vkontakte extends Provider
 
     public function suggestions(Registration $registration, $user, string $token)
     {
-
-        $registration
-            ->provideAvatar(Arr::get($user->toArray(), 'photo_100'))
-            ->suggestUsername($user->getName());
-              empty($user->getEmail()) ? ->suggestEmail('') : ->provideTrustedEmail($user->getEmail());
-            ->setPayload($user->toArray());
+        $reg =  $registration->provideAvatar(Arr::get($user->toArray(), 'photo_100'))->suggestUsername($user->getName());
+        empty($user->getEmail()) ?  $reg->suggestEmail('') : $reg->provideTrustedEmail($user->getEmail());
+        $reg->setPayload($user->toArray());
     }
 }
