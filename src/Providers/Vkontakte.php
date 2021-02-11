@@ -3,7 +3,6 @@
 namespace Flarumi\OauthVkontakte\Providers;
 
 use FoF\OAuth\Provider;
-use Illuminate\Support\Arr;
 use Flarum\Forum\Auth\Registration;
 use Flarum\Settings\SettingsRepositoryInterface;
 use League\OAuth2\Client\Provider\AbstractProvider;
@@ -55,8 +54,10 @@ class Vkontakte extends Provider
 
     public function suggestions(Registration $registration, $user, string $token)
     {
-        $reg =  $registration->provideAvatar(Arr::get($user->toArray(), 'photo_100'))->suggestUsername($user->getName());
-        empty($user->getEmail()) ?  $reg->suggestEmail('') : $reg->provideTrustedEmail($user->getEmail());
-        $reg->setPayload($user->toArray());
+        $registration
+            ->provideTrustedEmail($user->getEmail())
+            ->suggestUsername($user->getScreenName())
+            ->provideAvatar($user->getPhotoMax())
+            ->setPayload($user->toArray());
     }
 }
