@@ -10,14 +10,6 @@ use J4k\OAuth2\Client\Provider\Vkontakte as VkontakteProvider;
 
 class Vkontakte extends Provider
 {
-    protected $settings;
-
-    public function __construct(SettingsRepositoryInterface $settings)
-    {
-        $this->settings = $settings;
-    }
-
-    protected $provider;
 
     public function name(): string
     {
@@ -48,7 +40,7 @@ class Vkontakte extends Provider
             'clientId'        => $this->getSetting('client_id'),
             'clientSecret'    => $this->getSetting('client_secret'),
             'redirectUri'     => $redirectUri,
-            'version'         => '5.126',
+            'version'         => '5.130'
         ]);
     }
 
