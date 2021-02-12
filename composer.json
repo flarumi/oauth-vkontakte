@@ -11,7 +11,7 @@
   "homepage": "https://flarum.info",
   "require": {
     "flarum/core": "^0.1.0-beta.15",
-    "wargot-by/oauth2-vkontakte": "^2.0.1",
+    "zablik/oauth2-vkontakte": "^1.2.3",
     "fof/oauth": "^0.2.1"
   },
   "authors": [
