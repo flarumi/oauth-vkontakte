@@ -37,10 +37,10 @@ class Vkontakte extends Provider
    public function provider(string $redirectUri): AbstractProvider
     {
         return new VkontakteProvider([
-            'clientId'       => $this->getSetting('client_id'),
-            'clientSecret'   => $this->getSetting('client_secret'),
-            'redirectUri'    => $redirectUri,
-            'version'        => '5.130',
+            'clientId'      => $this->getSetting('client_id'),
+            'clientSecret'  => $this->getSetting('client_secret'),
+            'redirectUri'   => $redirectUri,
+            'version'       => '5.130',
         ]);
     }
 
