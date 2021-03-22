@@ -10,9 +10,9 @@
   "license": "MIT",
   "homepage": "https://flarum.info",
   "require": {
-    "flarum/core": "^0.1.0-beta.15",
+    "flarum/core": "^0.1.0-beta.16",
     "flarumi/oauth2-vkontakte": "^1.0.0",
-    "fof/oauth": "^0.2.1"
+    "fof/oauth": "^0.3.0"
   },
   "authors": [
     {
